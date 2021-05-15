@@ -1,0 +1,12 @@
+# Self-Hosted Github Action Runners on GCP via Cirun.io
+name: Sgkit Runners
+
+runners:
+  - name: gpu-runner
+    cloud: gcp
+    gpu: nvidia-tesla-t4
+    instance_type: n1-standard-1
+    machine_image: ubuntu-os-cloud/global/images/ubuntu-minimal-2004-focal-v20210429
+    preemptible: false
+    count: 2
+
